@@ -48,8 +48,11 @@ if [[ $DOSETUP =~ "y" ]] ; then
   sudo mv  bitcoingreen*/bin/* /usr/bin
 
   sudo apt-get install -y ufw
-  sudo ufw allow ssh/tcp
-  sudo ufw limit ssh/tcp
+  sudo ufw allow 28818/tcp
+  sudo ufw limit 28818/tcp
+  sudo ufw allow 46978/tcp
+  sudo ufw allow 10101/tcp
+  sudo ufw allow 24126/tcp
   sudo ufw logging on
   echo "y" | sudo ufw enable
   sudo ufw status
